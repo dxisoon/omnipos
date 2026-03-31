@@ -1,6 +1,6 @@
 # OmniPOS v1.0
 
-OmniPOS is a learning project to gain hands-on experience across the full web stack — Laravel, Vue.js 3, REST APIs, PHPUnit, third-party integrations and Pinia — combined into one real application. A fully working browser-based POS system covering barcode scanning, payments, receipts, inventory and analytics. Inspired by Zeoniq.
+OmniPOS is a learning project to gain hands-on experience across the full web stack Laravel, Vue.js 3, REST APIs, PHPUnit, third-party integrations and Pinia combined into one real application. A fully working browser-based POS system covering barcode scanning, payments, receipts, inventory and analytics. Inspired by Zeoniq.
 
 ---
 
