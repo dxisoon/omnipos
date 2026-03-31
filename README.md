@@ -266,4 +266,4 @@ Import `OmniPOS-API.postman_collection.json` into Postman to explore and test al
 MIT
 ---
 
-> Built with dxisoon as a learning project, from zero to a working POS system in one session.
+> Built by dxisoon as a learning project, from zero to a working POS system in one session.
