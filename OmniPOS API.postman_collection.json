@@ -1,0 +1,736 @@
+{
+  "info": {
+    "_postman_id": "23921514-e41d-4b38-ab0c-50c823229eb3",
+    "name": "OmniPOS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53623746",
+    "_collection_link": "https://go.postman.co/collection/53623746-23921514-e41d-4b38-ab0c-50c823229eb3?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get Products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "products"
+          ]
+        },
+        "description": "Retrieves a complete list of all active products, including categories and real-time stock-watchdog status."
+      },
+      "response": [
+        {
+          "name": "Get Products",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:16:04 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 2,\n        \"category_id\": 1,\n        \"barcode\": \"123456789012\",\n        \"name\": \"Milo\",\n        \"description\": null,\n        \"price\": \"5.00\",\n        \"cost_price\": \"5.00\",\n        \"stock_qty\": 93,\n        \"low_stock_threshold\": 20,\n        \"is_active\": true,\n        \"created_at\": \"2026-03-31T05:14:44.000000Z\",\n        \"updated_at\": \"2026-03-31T05:57:15.000000Z\",\n        \"is_low_stock\": false,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Drinks\",\n            \"description\": null,\n            \"created_at\": \"2026-03-31T04:48:44.000000Z\",\n            \"updated_at\": \"2026-03-31T04:48:44.000000Z\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"category_id\": 1,\n        \"barcode\": \"1234567890123\",\n        \"name\": \"Teh Tarik\",\n        \"description\": null,\n        \"price\": \"3.50\",\n        \"cost_price\": null,\n        \"stock_qty\": 79,\n        \"low_stock_threshold\": 10,\n        \"is_active\": true,\n        \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n        \"updated_at\": \"2026-03-31T05:14:49.000000Z\",\n        \"is_low_stock\": false,\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"Drinks\",\n            \"description\": null,\n            \"created_at\": \"2026-03-31T04:48:44.000000Z\",\n            \"updated_at\": \"2026-03-31T04:48:44.000000Z\"\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Product 1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Product 1",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/inventory/logs",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "inventory",
+                "logs"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:19:17 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 8,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -2,\n        \"stock_before\": 79,\n        \"stock_after\": 77,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #8\",\n        \"created_at\": \"2026-03-31T06:18:28.000000Z\",\n        \"updated_at\": \"2026-03-31T06:18:28.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 7,\n        \"product_id\": 2,\n        \"user_id\": 1,\n        \"change_qty\": -2,\n        \"stock_before\": 95,\n        \"stock_after\": 93,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #7\",\n        \"created_at\": \"2026-03-31T05:57:15.000000Z\",\n        \"updated_at\": \"2026-03-31T05:57:15.000000Z\",\n        \"product\": {\n            \"id\": 2,\n            \"category_id\": 1,\n            \"barcode\": \"123456789012\",\n            \"name\": \"Milo\",\n            \"description\": null,\n            \"price\": \"5.00\",\n            \"cost_price\": \"5.00\",\n            \"stock_qty\": 93,\n            \"low_stock_threshold\": 20,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T05:14:44.000000Z\",\n            \"updated_at\": \"2026-03-31T05:57:15.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"product_id\": 2,\n        \"user_id\": 1,\n        \"change_qty\": -5,\n        \"stock_before\": 100,\n        \"stock_after\": 95,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #6\",\n        \"created_at\": \"2026-03-31T05:40:31.000000Z\",\n        \"updated_at\": \"2026-03-31T05:40:31.000000Z\",\n        \"product\": {\n            \"id\": 2,\n            \"category_id\": 1,\n            \"barcode\": \"123456789012\",\n            \"name\": \"Milo\",\n            \"description\": null,\n            \"price\": \"5.00\",\n            \"cost_price\": \"5.00\",\n            \"stock_qty\": 93,\n            \"low_stock_threshold\": 20,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T05:14:44.000000Z\",\n            \"updated_at\": \"2026-03-31T05:57:15.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -1,\n        \"stock_before\": 80,\n        \"stock_after\": 79,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #5\",\n        \"created_at\": \"2026-03-31T05:02:06.000000Z\",\n        \"updated_at\": \"2026-03-31T05:02:06.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -5,\n        \"stock_before\": 85,\n        \"stock_after\": 80,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #4\",\n        \"created_at\": \"2026-03-31T03:41:47.000000Z\",\n        \"updated_at\": \"2026-03-31T03:41:47.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -5,\n        \"stock_before\": 90,\n        \"stock_after\": 85,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #3\",\n        \"created_at\": \"2026-03-31T03:40:06.000000Z\",\n        \"updated_at\": \"2026-03-31T03:40:06.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -5,\n        \"stock_before\": 95,\n        \"stock_after\": 90,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #2\",\n        \"created_at\": \"2026-03-31T03:38:41.000000Z\",\n        \"updated_at\": \"2026-03-31T03:38:41.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    },\n    {\n        \"id\": 1,\n        \"product_id\": 1,\n        \"user_id\": 1,\n        \"change_qty\": -5,\n        \"stock_before\": 100,\n        \"stock_after\": 95,\n        \"reason\": \"sale\",\n        \"notes\": \"Sale ID #1\",\n        \"created_at\": \"2026-03-31T03:38:11.000000Z\",\n        \"updated_at\": \"2026-03-31T03:38:11.000000Z\",\n        \"product\": {\n            \"id\": 1,\n            \"category_id\": 1,\n            \"barcode\": \"1234567890123\",\n            \"name\": \"Teh Tarik\",\n            \"description\": null,\n            \"price\": \"3.50\",\n            \"cost_price\": null,\n            \"stock_qty\": 77,\n            \"low_stock_threshold\": 10,\n            \"is_active\": true,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        },\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Admin Cashier\",\n            \"email\": \"admin@omnipos.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n            \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n        }\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Currency Rates",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/currency/rates",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "currency",
+            "rates"
+          ]
+        },
+        "description": "Live integration with ExchangeRate-API. Returns MYR-based rates with a hardcoded fallback mechanism for offline scenarios."
+      },
+      "response": [
+        {
+          "name": "Get Currency Rates",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/currency/rates",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "currency",
+                "rates"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:17:56 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"base\": \"MYR\",\n    \"rates\": {\n        \"USD\": 0.2254,\n        \"SGD\": 0.3021,\n        \"IDR\": 3520,\n        \"EUR\": 0.2076\n    },\n    \"source\": \"fallback\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Payment - Approve",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"card_number\": \"4111111111111111\",\r\n    \"amount\": 25.50,\r\n    \"currency\": \"MYR\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/payment/process",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "payment",
+            "process"
+          ]
+        },
+        "description": "Mocks a high-latency bank terminal connection. Use card '4111...' to simulate a successful credit card authorization (200 OK)."
+      },
+      "response": [
+        {
+          "name": "Payment - Approve",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"card_number\": \"4111111111111111\",\r\n    \"amount\": 25.50,\r\n    \"currency\": \"MYR\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment/process",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment",
+                "process"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:18:04 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"approved\",\n    \"message\": \"Payment approved.\",\n    \"transaction_id\": \"TXN-69CB671C863A9\",\n    \"amount\": 25.5,\n    \"currency\": \"MYR\",\n    \"code\": 200\n}"
+        }
+      ]
+    },
+    {
+      "name": "Payment - Decline",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"card_number\": \"4000000000000002\",\r\n    \"amount\": 25.50,\r\n    \"currency\": \"MYR\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/payment/process",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "payment",
+            "process"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Payment - Decline",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"card_number\": \"4000000000000002\",\r\n    \"amount\": 25.50,\r\n    \"currency\": \"MYR\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/payment/process",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "payment",
+                "process"
+              ]
+            }
+          },
+          "status": "Payment Required",
+          "code": 402,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:18:12 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"declined\",\n    \"message\": \"Payment declined. Insufficient funds.\",\n    \"code\": 402\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"barcode\": \"1234567890123\",\r\n    \"name\": \"Teh Tarik\",\r\n    \"price\": 3.50,\r\n    \"stock_qty\": 100,\r\n    \"low_stock_threshold\": 10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "products"
+          ]
+        },
+        "description": "Administrative endpoint to register new inventory items. Requires a unique barcode and basic pricing data."
+      },
+      "response": [
+        {
+          "name": "Create Product",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"barcode\": \"1234567890123\",\r\n    \"name\": \"Teh Tarik\",\r\n    \"price\": 3.50,\r\n    \"stock_qty\": 100,\r\n    \"low_stock_threshold\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "status": "Unprocessable Content",
+          "code": 422,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:18:22 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"The barcode has already been taken.\",\n    \"errors\": {\n        \"barcode\": [\n            \"The barcode has already been taken.\"\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Sale",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"discount_amount\": 1.00,\r\n    \"discount_type\": \"fixed\",\r\n    \"tax_amount\": 0.42,\r\n    \"payment_method\": \"cash\",\r\n    \"currency\": \"MYR\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/sales",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "sales"
+          ]
+        },
+        "description": "The core transaction engine. Validates stock levels, applies discounts/taxes, deducts inventory, and generates a unique UUID receipt token."
+      },
+      "response": [
+        {
+          "name": "Create Sale",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"discount_amount\": 1.00,\r\n    \"discount_type\": \"fixed\",\r\n    \"tax_amount\": 0.42,\r\n    \"payment_method\": \"cash\",\r\n    \"currency\": \"MYR\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/sales",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sales"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:18:28 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"user_id\": 1,\n    \"subtotal\": \"7.00\",\n    \"discount_amount\": \"1.00\",\n    \"discount_type\": \"fixed\",\n    \"tax_amount\": \"0.42\",\n    \"total_amount\": \"6.42\",\n    \"payment_method\": \"cash\",\n    \"payment_status\": \"paid\",\n    \"currency\": \"MYR\",\n    \"receipt_token\": \"a7f16458-4c9f-43a0-b7ed-39b7513974d5\",\n    \"updated_at\": \"2026-03-31T06:18:28.000000Z\",\n    \"created_at\": \"2026-03-31T06:18:28.000000Z\",\n    \"id\": 8,\n    \"items\": [\n        {\n            \"id\": 8,\n            \"sale_id\": 8,\n            \"product_id\": 1,\n            \"product_name\": \"Teh Tarik\",\n            \"unit_price\": \"3.50\",\n            \"quantity\": 2,\n            \"subtotal\": \"7.00\",\n            \"created_at\": \"2026-03-31T06:18:28.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Receipt by Token",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Get Receipt by Token",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/sales/receipt/a7f16458-4c9f-43a0-b7ed-39b7513974d5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "sales",
+                "receipt",
+                "a7f16458-4c9f-43a0-b7ed-39b7513974d5"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Host",
+              "value": "localhost:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.3.15"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 31 Mar 2026 06:19:12 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 8,\n    \"user_id\": 1,\n    \"subtotal\": \"7.00\",\n    \"discount_amount\": \"1.00\",\n    \"discount_type\": \"fixed\",\n    \"tax_amount\": \"0.42\",\n    \"total_amount\": \"6.42\",\n    \"payment_method\": \"cash\",\n    \"payment_status\": \"paid\",\n    \"currency\": \"MYR\",\n    \"receipt_token\": \"a7f16458-4c9f-43a0-b7ed-39b7513974d5\",\n    \"created_at\": \"2026-03-31T06:18:28.000000Z\",\n    \"updated_at\": \"2026-03-31T06:18:28.000000Z\",\n    \"items\": [\n        {\n            \"id\": 8,\n            \"sale_id\": 8,\n            \"product_id\": 1,\n            \"product_name\": \"Teh Tarik\",\n            \"unit_price\": \"3.50\",\n            \"quantity\": 2,\n            \"subtotal\": \"7.00\",\n            \"created_at\": \"2026-03-31T06:18:28.000000Z\",\n            \"updated_at\": \"2026-03-31T06:18:28.000000Z\"\n        }\n    ],\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Admin Cashier\",\n        \"email\": \"admin@omnipos.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2026-03-31T03:37:12.000000Z\",\n        \"updated_at\": \"2026-03-31T03:37:12.000000Z\"\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}
